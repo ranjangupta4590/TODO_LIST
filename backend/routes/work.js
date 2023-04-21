@@ -1,5 +1,7 @@
 const {Router} =require('express');
 
+const {allTodo,addTodo,updateTodo,deleteTodo} = require('../controllers/todoController');
+
 const route=Router();
 
 route.get('/',allTodo);
