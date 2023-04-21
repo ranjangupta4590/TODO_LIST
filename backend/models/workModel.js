@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 const workModelSchema =new mongoose.Schema({
-    text :{
+    data :{
        type:String,
        require:true
     },
