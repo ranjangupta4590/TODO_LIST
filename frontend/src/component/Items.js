@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
-const Items = ({ data }) => {
+const Items = ({ data,updateMode ,deleteTodo}) => {
     return (
         <div>
             
@@ -10,10 +10,8 @@ const Items = ({ data }) => {
                 {data}
             </div>
             <div className=' flex gap-2  pt-1 pr-2'>
-                <AiFillEdit className='cursor-pointer' />
-                <AiFillDelete className='cursor-pointer' />
-                {/* <AiFillEdit className='cursor-pointer' onClick={updateTodo}/>
-                <AiFillDelete className='cursor-pointer'onClick={deleteTodo}/> */}
+                <AiFillEdit className='cursor-pointer' onClick={updateMode}/>
+                <AiFillDelete className='cursor-pointer'onClick={deleteTodo}/>
             </div>
             </div>
 
