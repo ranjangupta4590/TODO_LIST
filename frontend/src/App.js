@@ -1,11 +1,14 @@
-import './App.css';
+// import './App.css';
+import Input from './component/Input';
+import Header from './component/header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h1>hello</h1>
-      </header>
+    <div className="min-h-full justify-center flex">
+      <div className=" pt-10 ">
+       <Header/>
+       <Input/>
+      </div>
     </div>
   );
 }
