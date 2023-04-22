@@ -10,8 +10,8 @@ const Items = ({ data,updateMode ,deleteTodo}) => {
                 {data}
             </div>
             <div className=' flex gap-2  pt-1 pr-2'>
-                <AiFillEdit className='cursor-pointer' onClick={updateMode}/>
-                <AiFillDelete className='cursor-pointer'onClick={deleteTodo}/>
+                <AiFillEdit className='cursor-pointer hover:scale-90 transition-all duration-300' onClick={updateMode}/>
+                <AiFillDelete className='cursor-pointer hover:scale-90 transition-all duration-300'onClick={deleteTodo}/>
             </div>
             </div>
 
