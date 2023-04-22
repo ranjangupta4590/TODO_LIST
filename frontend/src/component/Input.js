@@ -8,7 +8,7 @@ const [data,setData]=useState("");
 const [update,setUpdate]=useState(false);
 const [todoId,setTodoId]=useState("");
 
-useEffect(()=>{
+useEffect((e)=>{
    allTodo(setTodo);
 },[])
 
@@ -20,10 +20,10 @@ const updateMode =(_id,data)=>{
   return (
     <div>
         <div className='pt-10'>
-            <input required className='lg:w-[30rem] sm:w-[20rem] text-2xl  border-b-[2px] border-pink-400 outline-none' type='text' placeholder='Enter your work...' value={data} onChange={(e)=>setData(e.target.value)} />        
+            <input  className='lg:w-[30rem] sm:w-[20rem] text-2xl  border-b-[2px] border-pink-400 outline-none' type='text' placeholder='Enter your work...' value={data} onChange={(e)=>setData(e.target.value) }required />        
         </div>
         <div className='pt-2'>
-          <button className=' text-[20px] rounded-full pl-4 pr-4 items-center bg-pink-600 text-white hover:bg-blue-600' onClick={update ? ()=>updateTodo(todoId,data,setData,setTodo,setUpdate): ()=>addTodo(data,setData,setTodo)}>
+          <button type='submit' className=' text-[20px] rounded-full pl-4 pr-4 items-center bg-pink-600 text-white hover:bg-blue-600' onClick={update ? ()=>updateTodo(todoId,data,setData,setTodo,setUpdate): ()=>addTodo(data,setData,setTodo)}>
           {update?"Update":"Add"}
           </button>
         </div>

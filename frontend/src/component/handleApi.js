@@ -15,9 +15,11 @@ try {
 
 const addTodo = async (data,setData,setTodo)=>{
 try {
+    if(data!==""){
     await axios.post(`${baseUrl}`,{data})
-    setData("");
-    allTodo(setTodo);
+        setData("");
+        allTodo(setTodo);
+    }
 } catch (error) {
     console.log(`Error: ${error.message}`);
 }
