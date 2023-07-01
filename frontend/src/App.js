@@ -9,11 +9,11 @@ function App() {
   <div>
       Make your Potetial List
   </div>
-  <div>
+  {/* <div>
    theme
-  </div>
+  </div> */}
     </nav>
-    <div className=" App-header min-h-full justify-center flex" >
+    <div className=" App-header  min-h-full justify-center flex" >
     
       <div className=" pt-10 ">
        <Header/>
