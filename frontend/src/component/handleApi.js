@@ -27,7 +27,7 @@ try {
 
 const updateTodo = async (todoId,data,setData,setTodo,setUpdate)=>{
 try {
-    await axios.post(`${baseUrl}update/:id`,{_id:todoId,data})
+    await axios.post(`${baseUrl}/update/:id`,{_id:todoId,data})
     setData("");
     setUpdate(false);
     allTodo(setTodo);
@@ -38,7 +38,7 @@ try {
 
 const deleteTodo = async (_id,setTodo)=>{
 try {
-    await axios.post(`${baseUrl}delete/:id`,{_id})
+    await axios.post(`${baseUrl}/delete/:id`,{_id})
     allTodo(setTodo);
 } catch (error) {
     console.log(`Error: ${error.message}`);
